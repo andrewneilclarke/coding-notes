@@ -1,21 +1,10 @@
-const notes = [
-    {
-    "id": 1,
-    "title": "React Project Ideas",
-    "text": "1. Coding Notes, 2. Childrens Bedtime Stories",
-},
-{
-    "id": 2,
-    "title": "React Project Ideas",
-    "text": "1. Coding Notes, 2. Childrens Bedtime Stories",
-}
-]
+import Note from './Note'
 
-export const Notes = () => {
+const Notes = ({ notes }) => {
     return (
         <>
          {notes.map((note)=> (
-         <h3>{note.text}</h3>
+         <Note key={note.id} note={note} />
          ))}   
         </>
     )

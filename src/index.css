@@ -14,10 +14,11 @@ body {
   max-width: 580px;
   margin: 30px auto;
   overflow: auto;
-  min-height: 300px;
+  min-height: 400px;
   border: 1px solid steelblue;
-  padding: 30px;
+  padding: 15px;
   border-radius: 5px;
+  background-color: rgb(38, 38, 38);
 }
 
 .header {
@@ -25,6 +26,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding-left: 20px;
+  
 }
 
 .btn {
@@ -54,21 +57,26 @@ body {
   width: 100%;
 }
 
-.task {
-  background: #f4f4f4;
+.note {
+  background-color: rgb(191, 145, 235);
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
 }
 
-.task.reminder {
+.note.reminder {
   border-left: 5px solid green;
 }
 
-.task h3 {
+.note h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+}
+.note-text {
+  font-style: italic;
+  
 }
 
 .add-form {

@@ -1,6 +1,6 @@
 import { Button } from "./Button"
 
-export const Header = () => {
+const Header = () => {
 
     const onClick = () => {
         console.log('click')
