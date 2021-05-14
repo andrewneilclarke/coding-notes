@@ -9,29 +9,40 @@ function App() {
 "id": 1,
 "title": "React Project Ideas",
 "text": "Coding Notes, Childrens Bedtime Stories",
+"expand": false,
 },
 {
   "id": 2,
   "title": "JS Revision",
   "text": "Map, destructuring, fetch API, Async Await, Promises",
+  "expand": false,
 },
 {
   "id": 3,
   "title": "Advice",
   "text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
+  "expand": false,
 },
 ])
 
-// Delete Note
+// Delete Note prop
 const deleteNote = (id) => {
   setNotes(notes.filter((note) => note.id !== id ))
+}
+
+// expand note
+const expandNote = (id) => {
+  setNotes(notes.map((note) => note.id === id ? {...note, expand: !note.expand} : note))
 }
 
   return (
     <div className="container">
       <Header />
-      <Notes notes={notes} onDelete={deleteNote}/>
-      
+      {notes.length > 0 ? (
+       <Notes notes={notes} onDelete={deleteNote} onExpand={expandNote} /> 
+      ) : (
+        'No Notes To Show' 
+        )}
     </div>
   );
 }

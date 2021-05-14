@@ -14,11 +14,12 @@ body {
   max-width: 580px;
   margin: 30px auto;
   overflow: auto;
-  min-height: 400px;
+  min-height: 600px;
   border: 1px solid steelblue;
   padding: 15px;
   border-radius: 5px;
   background-color: rgb(38, 38, 38);
+  /* color: #94d0cc; */
 }
 
 .header {
@@ -26,7 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding-left: 20px;
+  padding-left: 10px;
   
 }
 
@@ -60,12 +61,13 @@ body {
 .note {
   background-color: rgb(208, 172, 241);
   margin: 5px;
-  padding: 10px 20px;
+  padding: 13px 20px;
   cursor: pointer;
 }
 
-.note.reminder {
-  border-left: 5px solid green;
+.note.expand {
+  min-height: 400;  
+  color: green;
 }
 
 .note h3 {
