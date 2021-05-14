@@ -1,7 +1,7 @@
 import { useState } from 'react' 
 import Header from './components/Header'
+import Note from './components/Note'
 import Notes from './components/Notes'
-import { useState } from 'react' 
 
 function App() {
   const [notes, setNotes] = useState([
@@ -21,10 +21,16 @@ function App() {
   "text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
 },
 ])
+
+// Delete Note
+const deleteNote = (id) => {
+  console.log('delete', id)
+}
+
   return (
     <div className="container">
       <Header />
-      <Notes notes={notes}/>
+      <Notes notes={notes} onDelete={deleteNote}/>
       
     </div>
   );
