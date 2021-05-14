@@ -7,7 +7,7 @@ export const Note = ( { note, onDelete, onOpen} ) => {
             <h3>
                 {note.title} <FaTimes style={{ color: "red", cursor:"pointer"}} onClick={() => onDelete(note.id)}/>
             </h3>
-                <Body />
+                <Body note={note} />
         </div>
     )
 }

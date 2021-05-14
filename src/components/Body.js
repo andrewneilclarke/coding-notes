@@ -3,9 +3,8 @@ import Notes from './Notes'
 
 const Body = ( {note } ) => {
     return (
-        <div className="note">
-            {/* <h5>{ note.text }</h5>  <p>{note.text}</p>    */}
-            <h5>Hello</h5>   
+        <div className="note-body">
+            <h6>{note.text}</h6>     
         </div>
     )
 }

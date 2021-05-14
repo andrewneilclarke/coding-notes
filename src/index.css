@@ -6,8 +6,9 @@
   padding: 0;
 }
 
-body {
+.note-body {
   font-family: 'Poppins', sans-serif;
+  color: rgb(245, 244, 216);
 }
 
 p {
