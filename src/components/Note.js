@@ -1,10 +1,10 @@
 import { Title } from "./Title";
 
-const Note = ({ notes }) => {
+const Note = ({ note }) => {
     return (
         <div className="note">
-            {/* <Title /> */}
-            {/* <p className="note-text">{ note.text }</p> */}
+            <Title />
+            <p className="note-text">{ note.text }</p>
         </div>
     )
 }

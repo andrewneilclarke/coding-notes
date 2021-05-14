@@ -23,7 +23,6 @@ function App() {
     <div className="container">
       <Header />
       <Notes notes={notes}/>
-      
     </div>
   );
 }
