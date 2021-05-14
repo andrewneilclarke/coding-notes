@@ -1,10 +1,10 @@
-import { Title } from "./Title";
+import { FaTimes } from 'react-icons/fa'
 
-const Note = ({ note }) => {
+export const Note = ( { note } ) => {
     return (
         <div className="note">
-            <Title />
-            <p className="note-text">{ note.text }</p>
+            <h3>{note.title} <FaTimes /></h3>
+            <p>{note.text}</p>
         </div>
     )
 }
