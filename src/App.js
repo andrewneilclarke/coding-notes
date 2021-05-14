@@ -30,16 +30,16 @@ const deleteNote = (id) => {
   setNotes(notes.filter((note) => note.id !== id ))
 }
 
-// expand note
-const expandNote = (id) => {
-  setNotes(notes.map((note) => note.id === id ? {...note, expand: !note.expand} : note))
+// open note
+const openNote = (id) => {
+  setNotes(notes.filter((note) => note.id === id ? [note.text, note.text] : ''))
 }
 
   return (
     <div className="container">
       <Header />
       {notes.length > 0 ? (
-       <Notes notes={notes} onDelete={deleteNote} onExpand={expandNote} /> 
+       <Notes notes={notes} onDelete={deleteNote} onOpen={openNote} /> 
       ) : (
         'No Notes To Show' 
         )}

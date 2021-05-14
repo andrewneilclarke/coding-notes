@@ -10,6 +10,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+p {
+  color: #94d0cc;
+}
+
 .container {
   max-width: 580px;
   margin: 30px auto;
@@ -59,7 +63,7 @@ body {
 }
 
 .note {
-  background-color: rgb(208, 172, 241);
+  background-color: rgb(211, 179, 243);
   margin: 5px;
   padding: 13px 20px;
   cursor: pointer;
@@ -67,7 +71,7 @@ body {
 
 .note.expand {
   min-height: 400;  
-  color: green;
+  color: blue;
 }
 
 .note h3 {
