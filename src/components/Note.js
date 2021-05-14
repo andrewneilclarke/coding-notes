@@ -1,4 +1,5 @@
 import { FaTimes } from 'react-icons/fa'
+import Body from './Body'
 
 export const Note = ( { note, onDelete, onOpen} ) => {
     return (
@@ -6,6 +7,7 @@ export const Note = ( { note, onDelete, onOpen} ) => {
             <h3>
                 {note.title} <FaTimes style={{ color: "red", cursor:"pointer"}} onClick={() => onDelete(note.id)}/>
             </h3>
+                <Body />
         </div>
     )
 }

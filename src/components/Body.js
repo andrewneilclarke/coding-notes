@@ -1,14 +1,12 @@
-// import Note from './Note'
-// import Notes from './Notes'
+import Note from './Note'
+import Notes from './Notes'
 
-// export const Title = ( {note, notes} ) => {
-//     return (
-//         <div className="note">
-//             {notes.map((note)=> (
-//             <h5>{ note.title }</h5> 
-//          ))}   
-           
-//         </div>
-//     )
-// }
-// export default Title;
+const Body = ( {note } ) => {
+    return (
+        <div className="note">
+            {/* <h5>{ note.text }</h5>  <p>{note.text}</p>    */}
+            <h5>Hello</h5>   
+        </div>
+    )
+}
+export default Body;

@@ -32,7 +32,7 @@ const deleteNote = (id) => {
 
 // open note
 const openNote = (id) => {
-  setNotes(notes.filter((note) => note.id === id ? [note.text, note.text] : ''))
+  setNotes(notes.filter((note) => note.id === id))
 }
 
   return (
