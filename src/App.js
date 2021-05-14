@@ -24,7 +24,7 @@ function App() {
 
 // Delete Note
 const deleteNote = (id) => {
-  console.log('delete', id)
+  setNotes(notes.filter((note) => note.id !== id ))
 }
 
   return (
