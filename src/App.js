@@ -1,6 +1,5 @@
 import { useState } from 'react' 
 import Header from './components/Header'
-import Note from './components/Note'
 import Notes from './components/Notes'
 
 function App() {

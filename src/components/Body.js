@@ -1,6 +1,3 @@
-import Note from './Note'
-import Notes from './Notes'
-
 const Body = ( {note } ) => {
     return (
         <div className="note-body">
