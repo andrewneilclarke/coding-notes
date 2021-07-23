@@ -1,9 +1,9 @@
 import { FaTimes } from 'react-icons/fa'
 import Body from './Body'
 
-export const Note = ( { note, onDelete, onOpen} ) => {
+export const Note = ( { note, onDelete } ) => {
     return (
-        <div className={`note ${note.expand ? 'expand' : ''}`} onDoubleClick={() => onOpen(note.id)}>
+        <div className={`note ${note.expand ? 'expand' : ''}`}>
             <h3>
                 {note.title} <FaTimes style={{ color: "red", cursor:"pointer"}} onClick={() => onDelete(note.id)}/>
             </h3>

@@ -1,17 +1,16 @@
 import { Button } from "./Button"
 
-const Header = () => {
 
-    const onClick = () => {
-        console.log('click')
-    }
+const Header = ( {setshowaddform, showaddform, handleClick } ) => {
+    
     return (
         <header className="header">
         <div>
-        <h1 style={{ color: "#94d0cc"}}>Coding Notes</h1>
-        <p>Double-click to expand</p>
+        <h1>Coding Notes</h1>
+        <h6>Keep on track</h6>
+        {/* <p>Click title to expand</p> */}
         </div>
-        <Button color="#94d0cc" text="Add" onClick={onClick}/>
+        <Button text="Add" onClick={handleClick}/>
       </header>
     )
 }

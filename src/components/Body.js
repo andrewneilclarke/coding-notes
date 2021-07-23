@@ -1,7 +1,8 @@
-const Body = ( {note } ) => {
+const Body = ( { note } ) => {
+    const { text } = note;
     return (
-        <div className="note-body">
-            <h6>{note.text}</h6>     
+        <div className="note">
+            {text}
         </div>
     )
 }
