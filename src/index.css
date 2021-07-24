@@ -27,8 +27,8 @@ body {
   margin: 20px 0;
   padding-left: 10px;
 }
-.container p {
-  /* margin: 5px; */
+.header p {
+  margin: 0;
 }
 
 li {
@@ -75,6 +75,7 @@ li {
   background-color: var(--purple);
   margin: 8px;
   padding: 1px;
+  /* max-width: 30vw; */
 }
 
 .note.expand {
@@ -88,6 +89,14 @@ li {
   justify-content: space-between; */
   margin: 10px 10px;
   font-weight: normal;
+}
+.body-container {
+  display: flex;
+  justify-content: space-between;
+}
+.body-container .updated {
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 .note ul li {

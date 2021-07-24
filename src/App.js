@@ -9,38 +9,44 @@ function App() {
 {    
 "id": 1,
 "title": "React Project Ideas",
-"text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
+"items": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
 "expand": false,
+"updated": '24 July 2021'
 },
 {
   "id": 2,
   "title": "JS Revision",
-  "text": "Map, destructuring, fetch API, Async Await, Promises",
+  "items": "Map, destructuring, fetch API, Async Await, Promises",
   "expand": false,
+  "updated": ''
 },
 {
   "id": 3,
   "title": "Advice",
-  "text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
+  "items": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
   "expand": false,
+  "updated": ''
 },
 {
   "id": 4,
   "title": "Tutorials",
-  "text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
+  "items": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
   "expand": false,
+  "updated": ''
 },
 {
   "id": 5,
   "title": "ES6",
-  "text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
+  "items": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
   "expand": false,
+  "updated": ''
 },
 {
   "id": 6,
   "title": "Misc",
-  "text": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
+  "items": "Tutorial Hell, Memorizing Syntax, Portfolio Projects",
   "expand": false,
+  "updated": ''
 },
 ])
 
@@ -61,7 +67,7 @@ const handleClick = () => {
 // add note
 const addNote = (note) => {
   const id = Math.floor(Math.random() * 10000) +1
-  // console.log(note)
+  console.log(note)
   const newNote = { id, ...note }
   setNotes([...notes, newNote])
 }
