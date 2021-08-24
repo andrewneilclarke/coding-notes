@@ -5,7 +5,7 @@ import AddNote from './components/AddNote'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import useFetch from './components/useFetch'
 
-export function App() {
+function App() {
   const [showaddform, setshowaddform] = useState(false)
   const { data:notes, loading, error } = useFetch('http://localhost:8000/notes')
   

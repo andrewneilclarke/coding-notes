@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (url, currentState) => {
+const useFetch = (url) => {
     const [data, setData] = useState(null);
     const [loading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -25,7 +25,7 @@ const useFetch = (url, currentState) => {
         })
       }, 1000);
       return () => console.log('cleanup'); 
-        }, [url, currentState])
+        }, [url])
       return { data, loading, error }
     }
 
