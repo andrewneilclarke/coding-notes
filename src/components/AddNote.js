@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
-const AddNote = ( { onAdd } ) => {
+const AddNote = ( { onAdd, setTime, showaddform, setshowaddform } ) => {
     const [title, setTitle] = useState('')
     const [items, setItems] = useState('')
     const [expand, setExpand] = useState(false)
-    const [updated, setUpdated] = useState('')
+    const [updated, setUpdated] = useState(setTime)
+    const history = useHistory();
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -12,19 +14,26 @@ const AddNote = ( { onAdd } ) => {
             alert('Please fill out note')
             return
         }
-        const now = new Date();
-        const nowTime = now.toLocaleString();
-        onAdd( { title, items, expand, updated })
+        const note = { title, items, expand, updated }
+        const timeStamp = new Date().toLocaleString();
         setTitle('')
         setItems('')
-        setExpand('')
-        setUpdated(nowTime)
-        console.log(title, items, expand, nowTime)
-        
+        setExpand(false)
+        setUpdated(timeStamp)
+        // onAdd( { title, items, expand, updated })
+        fetch('http://localhost:8000/notes', {
+            method: 'POST',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(note),
+        }).then(() => {
+            // history.go(-1);
+            // history.push('/');
+            setshowaddform(!showaddform);
+        });
     }
 
     return (
-        <form className="add-form note" onSubmit={onSubmit}>
+        <form className="add-form" onSubmit={onSubmit}>
             <div className="form-control">
                 <label>Title</label>
                 <input type="text" value={title} placeholder="Add Note" onChange={(e) => setTitle(e.target.value)} />
